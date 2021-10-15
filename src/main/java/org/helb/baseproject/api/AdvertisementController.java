@@ -26,5 +26,9 @@ public class AdvertisementController {
     public Advertisement  getRandAd() {
         return  this.advertissementService.getRandAd();
     }
+    @GetMapping("api/ad/getBoolAd")
+    public boolean  getBoolAd() {
+        return  this.advertissementService.getBoolAd();
+    }
 
 }

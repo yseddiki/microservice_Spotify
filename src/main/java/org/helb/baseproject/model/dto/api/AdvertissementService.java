@@ -27,4 +27,15 @@ public class AdvertissementService {
         int randAd = (int)(Math.random()*ads.size()+1);
         return ads.get(randAd);
     }
+    public boolean getBoolAd(){
+        boolean response ;
+        int rand=2 ;
+        if((int) (Math.random()*rand) ==1) {
+            response=true;
+        }
+        else{
+        response =false;
+        }
+        return response;
+    }
 }
