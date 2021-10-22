@@ -1,29 +1,25 @@
 package org.helb.baseproject.model.dto.api;
 
 import org.helb.baseproject.model.entity.Advertisement;
-import org.helb.baseproject.repo.AdvertissementRepository;
+import org.helb.baseproject.repo.AdvertisementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Random;
 
 @Service
 public class AdvertisementService {
-
     @Autowired
-    public AdvertissementRepository advertissementRepository;
+    public AdvertisementRepository advertisementRepository;
 
     public List<Advertisement> getAllAd (){
-        return this.advertissementRepository.findAll();
+        return this.advertisementRepository.findAll();
     }
     public long getSizeAdApi () {
-        return advertissementRepository.count();
+        return advertisementRepository.count();
     }
     public Advertisement getRandAd () {
-        List<Advertisement> ads = advertissementRepository.findAll();
+        List<Advertisement> ads = advertisementRepository.findAll();
         int randAd = (int)(Math.random()*ads.size()+1);
         return ads.get(randAd);
     }
