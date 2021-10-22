@@ -1,10 +1,9 @@
 package org.helb.baseproject.api;
 
-import org.helb.baseproject.model.dto.api.AdvertissementService;
+import org.helb.baseproject.model.dto.api.AdvertisementService;
 import org.helb.baseproject.model.entity.Advertisement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -13,22 +12,22 @@ import java.util.List;
 public class AdvertisementController {
 
     @Autowired
-    private AdvertissementService advertissementService;
+    private AdvertisementService advertisementService;
         @GetMapping("api/ad/getAllAd")
     public List<Advertisement> getAllAd (){
-        return this.advertissementService.getAllAd();
+        return this.advertisementService.getAllAd();
     }
     @GetMapping("api/ad/getSizeAdAPI")
     public Long  getSizeAdAPI() {
-        return  this.advertissementService.getSizeAdApi();
+        return  this.advertisementService.getSizeAdApi();
     }
     @GetMapping("api/ad/getRandAd")
     public Advertisement  getRandAd() {
-        return  this.advertissementService.getRandAd();
+        return  this.advertisementService.getRandAd();
     }
     @GetMapping("api/ad/getBoolAd")
     public boolean  getBoolAd() {
-        return  this.advertissementService.getBoolAd();
+        return  this.advertisementService.getBoolAd();
     }
 
 }

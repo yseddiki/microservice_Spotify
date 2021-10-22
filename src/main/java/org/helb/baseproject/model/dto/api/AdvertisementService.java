@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 @Service
-public class AdvertissementService {
+public class AdvertisementService {
 
     @Autowired
     public AdvertissementRepository advertissementRepository;

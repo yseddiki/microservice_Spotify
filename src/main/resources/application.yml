@@ -1,5 +1,6 @@
-app:
-  name : Microservices Advertissment
-  description : Welcome to Microservice Advertissement
+spring:
+  application:
+    name: ADVERTISEMENT-SERVICE
+    description : Welcome to Microservice Advertisement
 server:
    port : 8017
